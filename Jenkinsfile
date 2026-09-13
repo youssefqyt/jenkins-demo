@@ -11,19 +11,19 @@ pipeline {
 
         stage('Install') {
             steps {
-                echo 'Installing dependencies...'
+                 bat 'npm install'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                bat 'npm test'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building application...'
+                bat 'npm run build'
             }
         }
     }
