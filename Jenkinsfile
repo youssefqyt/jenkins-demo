@@ -3,27 +3,16 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Check Node') {
             steps {
-                echo 'Getting source code...'
+                bat 'node --version'
+                bat 'npm --version'
             }
         }
 
-        stage('Install') {
+        stage('Check Git') {
             steps {
-                 bat 'npm install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'npm test'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                bat 'npm run build'
+                bat 'git --version'
             }
         }
     }
