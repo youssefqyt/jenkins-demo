@@ -1,1 +1,2 @@
-# jenkins-demo
+Hello Jenkins!
+This project is connected to Jenkins.
